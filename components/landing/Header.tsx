@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 w-full">
-      <div className="bg-white dark:bg-black/5 w-full shadow-lg  backdrop-blur-md border-b border-zinc-200/60 dark:border-zinc-700/60">
+      <div className="bg-white/5 dark:bg-black/5 w-full shadow-lg  backdrop-blur-md border-b border-zinc-200/60 dark:border-zinc-700/60">
         {/* Desktop and Mobile Header */}
         <div className="flex items-center justify-between w-full px-4 md:px-8 h-16">
          
@@ -21,7 +21,7 @@ const Header = () => {
             <Link href="/" className="flex items-center gap-2">
             <VectorSquare className="text-linear-to-tr from-blue-50 to-slate-700 w-6 h-6 dark:text-white" />
             
-              <span className="hidden sm:block font-bold text-xl dark:text-white text-gray-900 font-mono">
+              <span className="hidden sm:block font-bold text-xl bg-linear-to-tr from-lime-500 to-cyan-400 bg-clip-text text-transparent font-mono">
                 SilkUI
               </span>
             </Link>
