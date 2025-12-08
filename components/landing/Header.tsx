@@ -15,6 +15,7 @@ const Header = () => {
       <div className="bg-white dark:bg-black/5 w-full shadow-lg  backdrop-blur-md border-b border-zinc-200/60 dark:border-zinc-700/60">
         {/* Desktop and Mobile Header */}
         <div className="flex items-center justify-between w-full px-4 md:px-8 h-16">
+         
           {/* Left Section */}
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-2">
