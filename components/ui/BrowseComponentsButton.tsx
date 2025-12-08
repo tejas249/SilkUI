@@ -4,14 +4,11 @@ import { Link } from "next-view-transitions";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import { ArrowDownRight, ArrowRight } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 
 export function BrowseComponentsButton() {
   return (
-    <Link
-      href="/docs/components/action-search-bar"
-      className="flex items-center gap-8"
-    >
+    <Link href="/docs/components/action-search-bar" className="w-full sm:w-auto">
       <motion.div
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1, transition: { duration: 0.2 } }}
@@ -19,8 +16,8 @@ export function BrowseComponentsButton() {
       >
         <Button
           className={cn(
-            "relative inline-flex items-center justify-center gap-4 rounded-xl font-medium",
-            "relative h-12 px-6 min-w-72 md:min-w-56",
+            "relative inline-flex items-center justify-center gap-4 rounded-xl font-medium w-full sm:w-auto",
+            "h-12 px-6 min-w-full sm:min-w-56",
             "bg-black dark:bg-white",
             "text-white dark:text-black",
             "border-2 border-orange-500/20 dark:border-orange-400/20",
