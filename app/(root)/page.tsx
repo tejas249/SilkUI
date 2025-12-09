@@ -1,4 +1,5 @@
 import HeroSection from "@/components/landing/hero";
+import Alert01 from "@/components/silkui/alert/alert-01";
 
 
 export default function Home() {
@@ -7,8 +8,8 @@ export default function Home() {
        <div className="grid grid-rows-[auto_1fr_auto] min-h-screen px-6 lg:px-4 gap-4 sm:gap-12">
          <HeroSection/>
        </div>
-    
 
+      
      </main>
   );
 }
