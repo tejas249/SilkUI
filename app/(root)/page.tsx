@@ -7,6 +7,8 @@ export default function Home() {
        <div className="grid grid-rows-[auto_1fr_auto] min-h-screen px-6 lg:px-4 gap-4 sm:gap-12">
          <HeroSection/>
        </div>
+    
+
      </main>
   );
 }
