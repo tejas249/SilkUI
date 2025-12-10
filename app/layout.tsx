@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { RootProvider } from 'fumadocs-ui/provider/next';
+import { Root } from "react-day-picker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +38,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+           <RootProvider>
+             {children}
+           </RootProvider>
           </ThemeProvider>
         </ViewTransitions>
       </body>
