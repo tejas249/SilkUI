@@ -15,12 +15,12 @@
     "jsx": "react-jsx",
     "incremental": true,
 
-    "plugins": [
-      { "name": "next" }
-    ],
+    "plugins": [{ "name": "next" }],
 
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "fumadocs-core:collections/*": [".source/*"],
+      "fumadocs-mdx:collections/*": [".source/*"]
     },
 
     "typeRoots": ["./node_modules/@types", "./.next/types"]

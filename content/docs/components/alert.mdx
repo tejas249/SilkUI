@@ -1,0 +1,39 @@
+---
+title: Alert
+description: Alert components for feedback and status messaging.
+---
+
+SilkUI includes multiple alert styles under `components/silkui/alert`. Use them to display inline feedback, status, or contextual info.
+
+## Variants
+
+- `alert-01`: Basic success/info alert with icon and text.
+- `alert-02`: Alert with accent bar for emphasis.
+- `alert-03`: Dismissible alert with close affordance.
+- `alert-04`: Alert with actions (links/buttons).
+
+## Usage
+
+```tsx
+import { Alert03 } from "@/components/silkui/alert/alert-03";
+
+export default function Example() {
+  return (
+    <div className="space-y-4">
+      <Alert03 />
+    </div>
+  );
+}
+```
+
+> Note: The variants are self-contained. If you need to wire close/CTA behavior, wrap the component and hook into the rendered buttons/links.
+
+## Design Notes
+
+- Icons come from `lucide-react`; colors rely on Tailwind utilities baked into each variant.
+- Keep alerts concise; for longer content, pair with a dismiss action.
+
+## Related
+
+- AI Input: Use alerts to surface validation or status near inputs.
+

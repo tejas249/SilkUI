@@ -1,0 +1,40 @@
+---
+title: AI Input
+description: AI input field patterns for chat and prompt UIs.
+---
+
+The SilkUI AI input blocks provide ready-to-use patterns for chat-style and prompt-style inputs. These components live under `components/silkui/ai-input`.
+
+## Variants
+
+- `ai-input-01` / `ai-input-02`: Compact message bars with send actions.
+- `ai-input-03`: Input with quick suggestion chips.
+- `ai-input-04`: Multiline prompt with attachment + run controls.
+- `ai-input-05` / `ai-input-06`: Inline inputs with secondary actions (history, settings).
+
+## Usage
+
+Import the variant you need and render it directly. Each variant is self-contained.
+
+```tsx
+import { AIInput04 } from "@/components/silkui/ai-input/ai-input-04";
+
+export default function Example() {
+  return (
+    <div className="max-w-2xl">
+      <AIInput04 />
+    </div>
+  );
+}
+```
+
+> Tip: Wrap in a container (`max-w-*`) to control layout. The inputs are unstyled beyond Tailwind utility classes included in the component.
+
+## Props
+
+These variants are primarily presentational and do not require props. If you need behavior (e.g., submit handlers), wrap the component and attach your own state/handlers around the input elements inside.
+
+## Related
+
+- Alerts: See the `Alert` docs for status messaging alongside inputs.
+

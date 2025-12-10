@@ -1,8 +1,7 @@
-// @ts-expect-error - fumadocs virtual module
-import { docs } from 'fumadocs-mdx:collections/server';
-import { loader } from 'fumadocs-core/source';
+import { docs } from "fumadocs-mdx:collections/docs";
+import { loader } from "fumadocs-core/source";
 
 export const source = loader({
-  baseUrl: '/docs',
+  baseUrl: "/docs",
   source: docs.toFumadocsSource(),
 });
