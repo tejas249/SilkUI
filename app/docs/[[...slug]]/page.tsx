@@ -6,7 +6,6 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page';
 import { notFound } from 'next/navigation';
-import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 
 interface PageProps {
@@ -17,14 +16,14 @@ export default function Page({ params }: PageProps) {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  const MDXContent = page.data.body;
-
   return (
     <DocsPage>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-        <MDXContent components={getMDXComponents()} />
+        <div className="prose dark:prose-invert max-w-none">
+          <p>Documentation content for: {params.slug?.join('/') || 'home'}</p>
+        </div>
       </DocsBody>
     </DocsPage>
   );

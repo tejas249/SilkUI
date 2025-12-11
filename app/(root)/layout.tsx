@@ -12,13 +12,12 @@ export const metadata:Metadata = {
 
 export default function HomeLayout({children}:{children:React.ReactNode}){
     return (
-        <>
-        <Header/>
-         <main className="relative w-full pt-0 md:pt-0">
-             {children}
-         </main>
+        <div className="min-h-screen bg-gradient-to-b from-white via-lime-50/20 to-cyan-50/30 dark:from-black dark:via-neutral-950 dark:to-cyan-950/30 text-foreground">
+          <Header/>
+          <main className="relative w-full pt-0 md:pt-0">
+            {children}
+          </main>
           <Footer/>
-            
-        </>
+        </div>
     )
 }

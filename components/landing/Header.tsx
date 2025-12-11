@@ -19,43 +19,45 @@ const Header = () => {
           {/* Left Section */}
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-2">
-            <VectorSquare className="text-linear-to-tr from-blue-50 to-slate-700 w-6 h-6 dark:text-white" />
-            
-              <span className="hidden sm:block font-bold text-xl bg-linear-to-tr from-lime-500 to-cyan-400 bg-clip-text text-transparent font-mono">
+              <VectorSquare className="w-6 h-6 text-lime-500" />
+              <span className="hidden sm:block font-bold text-xl gradient-text font-mono">
                 SilkUI
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden sm:flex items-center gap-7 ml-6">
+            <nav className="hidden sm:flex items-center gap-6 ml-6 text-sm font-medium">
               <ViewTransitionsLink
-                href="/docs/components/background-paths"
-                className="font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                href="/docs"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                Components
+                Browse Components
               </ViewTransitionsLink>
-
               <ViewTransitionsLink
-                href="/pricing"
-                className="font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                href="/docs"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                Pricing
+                Docs
               </ViewTransitionsLink>
-
               <Link
                 href="#"
-                className="font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                Templates
-                <Badge variant="brand" className="ml-1">New</Badge>
+                Templates <Badge variant="brand" className="ml-1">New</Badge>
               </Link>
             </nav>
           </div>
 
           {/* Right Section */}
           <div className="flex items-center gap-4">
-            <div className="hidden sm:flex">
+            <div className="hidden sm:flex items-center gap-3">
               <ThemeToggle />
+              <Link
+                href="/docs"
+                className="px-3 py-2 rounded-lg bg-gradient-to-r from-lime-500 to-cyan-400 text-black text-sm font-semibold shadow-sm hover:shadow-lg transition-all"
+              >
+                Browse Components
+              </Link>
             </div>
 
          
@@ -76,20 +78,21 @@ const Header = () => {
         {open && (
           <div className="sm:hidden w-full px-4 pb-4 animate-in fade-in slide-in-from-top-3">
             <nav className="flex flex-col gap-4 pt-2 text-gray-800 dark:text-gray-200">
-              <Link href="/docs/components/background-paths" onClick={() => setOpen(false)}>
-                Components
+              <Link href="/docs" onClick={() => setOpen(false)}>
+                Browse Components
               </Link>
-
-              <Link href="/pricing" onClick={() => setOpen(false)}>
-                Pricing
+              <Link href="/docs" onClick={() => setOpen(false)}>
+                Docs
               </Link>
-
-              <Link href="#" onClick={() => setOpen(false)}>
-                Templates <Badge variant="brand" className="ml-1">New</Badge>
-              </Link>
-
-              <div className="pt-2">
+              <div className="pt-2 flex items-center justify-between">
                 <ThemeToggle />
+                <Link
+                  href="/docs"
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-2 rounded-lg bg-gradient-to-r from-lime-500 to-cyan-400 text-black text-sm font-semibold shadow-sm"
+                >
+                  Browse
+                </Link>
               </div>
             </nav>
           </div>

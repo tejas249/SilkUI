@@ -9,34 +9,23 @@ const HeroSection = () => {
       className="
         relative
         mx-auto w-full max-w-7xl 
-        min-h-[85vh]
-        flex flex-col 
+        min-h-auto
+        flex flex-col lg:flex-row
         items-start
-        justify-start 
-        gap-8 
+        justify-between
+        gap-8 lg:gap-12
         px-4 sm:px-6 
-        pt-10 sm:pt-16
+        py-10 sm:py-16 lg:py-20
       "
     >
-      {/* LEFT SIDE (unchanged, stays exactly like your screenshot) */}
-      <Title />
-      <Features />
+      {/* LEFT SIDE */}
+      <div className="w-full lg:w-[45%] flex flex-col gap-6">
+        <Title />
+        <Features />
+      </div>
 
-      {/* RIGHT SIDE — fixed on the right on large screens */}
-      <div
-        className="
-          w-full 
-          lg:w-[55%] 
-          lg:absolute 
-          lg:top-0 
-          lg:right-0 
-          lg:h-full 
-          flex flex-col 
-          justify-center 
-          gap-6 
-          lg:pl-8
-        "
-      >
+      {/* RIGHT SIDE */}
+      <div className="w-full lg:w-[45%]">
         <RightSide />
       </div>
 

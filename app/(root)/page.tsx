@@ -1,15 +1,10 @@
 import HeroSection from "@/components/landing/hero";
-import Alert01 from "@/components/silkui/alert/alert-01";
-
-
 export default function Home() {
   return (
-     <main className="bg-white dark:bg-black/5 overflow-x-hidden">
-       <div className="grid grid-rows-[auto_1fr_auto] min-h-screen px-6 lg:px-4 gap-4 sm:gap-12">
-         <HeroSection/>
-       </div>
-
-      
-     </main>
+    <main className="bg-linear-to-b from-white via-lime-50/30 to-cyan-50/40 dark:from-black dark:via-neutral-950 dark:to-cyan-950/40 overflow-x-hidden">
+      <div className="w-full">
+        <HeroSection />
+      </div>
+    </main>
   );
 }
