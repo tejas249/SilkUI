@@ -66,7 +66,7 @@ const RightSide = () => {
         <div className="relative rounded-2xl overflow-hidden border border-zinc-200/50 dark:border-zinc-800/50 bg-linear-to-br from-white to-zinc-50 dark:from-zinc-950 dark:to-black/50 backdrop-blur-sm">
           <div className="absolute inset-0 bg-linear-to-br from-lime-500/10 via-transparent to-cyan-400/10 dark:from-lime-500/5 dark:via-transparent dark:to-cyan-400/5"></div>
           
-          <div className="relative p-8 flex flex-col gap-6">
+          <div className="relative p-8 flex flex-col gap-6 hover:cursor-pointer hover:border border-white/30 dark:hover:border-black/30 transition-all duration-100">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-linear-to-br from-lime-500 to-cyan-400 opacity-90 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">✨</span>

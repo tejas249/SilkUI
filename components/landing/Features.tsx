@@ -7,9 +7,7 @@ import ShadcnIcon from "../Icons/shadcn";
 import ReactIcon from "../Icons/react";
 import MotionIcon from "../Icons/motion"; // ⬅️ Added your Motion SVG icon
 
-/* ----------------------- */
-/*   Feature Item Props    */
-/* ----------------------- */
+
 type FeatureItemProps = {
   name: string;
   svg: React.ReactNode;
@@ -18,9 +16,7 @@ type FeatureItemProps = {
   onLeave: () => void;
 };
 
-/* ---------------------------- */
-/*    Reusable Feature Item     */
-/* ---------------------------- */
+
 function FeatureItem({
   name,
   svg,
@@ -36,7 +32,7 @@ function FeatureItem({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-      className="flex flex-col items-center gap-2 text-left"
+      className="flex flex-col items-center gap-2 text-left hover:cursor-pointer hover:scale-105 transition-transform"
     >
       <motion.div
         animate={{
@@ -63,9 +59,7 @@ function FeatureItem({
   );
 }
 
-/* ---------------------------- */
-/*      Main Features Grid      */
-/* ---------------------------- */
+
 export default function Features() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
@@ -81,7 +75,6 @@ export default function Features() {
           w-full max-w-xl
         "
       >
-        {/* TailwindCSS */}
         <FeatureItem
           name="TailwindCSS"
           svg={
@@ -114,7 +107,6 @@ export default function Features() {
           onLeave={() => setHoveredItem(null)}
         />
 
-        {/* Motion Icon (React Motion) */}
         <FeatureItem
           name="Motion"
           svg={<MotionIcon className="w-9 h-9" />}
@@ -123,7 +115,6 @@ export default function Features() {
           onLeave={() => setHoveredItem(null)}
         />
 
-        {/* Shadcn UI */}
         <FeatureItem
           name="shadcn/ui"
           svg={<ShadcnIcon className="w-9 h-9 text-black dark:text-white" />}
@@ -132,7 +123,6 @@ export default function Features() {
           onLeave={() => setHoveredItem(null)}
         />
 
-        {/* Next.js */}
         <FeatureItem
           name="Next.js"
           svg={<Nextjs className="w-9 h-9" />}
@@ -141,7 +131,6 @@ export default function Features() {
           onLeave={() => setHoveredItem(null)}
         />
 
-        {/* React */}
         <FeatureItem
           name="React"
           svg={<ReactIcon className="w-9 h-9" />}

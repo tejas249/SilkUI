@@ -26,16 +26,16 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden sm:flex items-center gap-6 ml-6 text-sm font-medium">
+            <nav className="hidden sm:flex items-center gap-6 ml-6 text-sm font-medium hover:cursor-pointer">
               <ViewTransitionsLink
                 href="/docs"
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors hover:cursor-pointer "
               >
                 Browse Components
               </ViewTransitionsLink>
               <ViewTransitionsLink
                 href="/docs"
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors hover:cursor-pointer "
               >
                 Docs
               </ViewTransitionsLink>
