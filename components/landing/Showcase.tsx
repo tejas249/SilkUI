@@ -21,7 +21,7 @@ const Showcase: React.FC = () => {
 
       <div className="mt-14 flex flex-col md:flex-row gap-8 items-center justify-center">
      
-        <BentoGrid items={[]}/>
+        <BentoGrid />
       </div>
     </section>
   )
